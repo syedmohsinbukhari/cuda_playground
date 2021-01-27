@@ -1,13 +1,13 @@
+/* THIS CODE IS TAKEN FROM CUDA 11.1 SAMPLES */
+
 #include <stdio.h>
 #include <cuda_runtime.h>
 
 __global__
-void vectorAdd(const float *A, const float *B, float *C, int numElements)
-{
+void vectorAdd(const float *A, const float *B, float *C, int numElements) {
     int i = blockDim.x * blockIdx.x + threadIdx.x;
 
-    if (i < numElements)
-    {
+    if (i < numElements) {
         C[i] = A[i] + B[i];
     }
 }
