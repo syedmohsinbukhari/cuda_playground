@@ -1,6 +1,38 @@
-*.i
-*.ii
-*.gpu
-*.ptx
-*.cubin
-*.fatbin
+# Author: mohsin@hazen.ai
+# References for the contents of this file:
+#     Joakim Elofsson's answer on StackOverflow to question at the following
+#     link (https://stackoverflow.com/questions/987142/)
+# Joakim Elofsson's StackOverflow profile link:
+#     Joakim Elofsson (https://stackoverflow.com/users/109869/joakim-elofsson)
+
+# Ignore everything
+*
+
+# But not these files...
+!.env
+!.gitignore
+!CMakeLists.txt
+!docker-compose.yml
+!README.md
+!dockerfiles/*.Dockerfile
+!docs/*.md
+!LICENSE
+!requirements/*.txt
+!scripts/*.py
+!scripts/*.sh
+
+#C++
+!include/*/*.h
+!include/*.h
+!src/*.h
+!src/*.cc
+!src/*.cu
+!src/*/*.h
+!src/*/*.cc
+!src/*/*.cu
+
+# ...even if they are in subdirectories
+!*/
+
+# if the files to be tracked are in subdirectories
+# !*/include/*.h
