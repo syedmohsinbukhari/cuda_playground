@@ -1,1 +1,1 @@
-add_executable(vectorAdd vectorAdd.cu)
+add_executable(vector_add vector_add.cu)
